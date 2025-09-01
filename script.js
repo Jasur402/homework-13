@@ -1,5 +1,5 @@
 /// 1 ////
-/*  const get = fetch('https://jsonplaceholder.typicode.com/posts/1',{
+  const get = fetch('https://jsonplaceholder.typicode.com/posts/1',{
   method: 'GET'
 })
 
@@ -13,14 +13,7 @@ get
 })
 .then((json) => {
 console.log(json.title)
-})
-.catch((err) => {
-   console.log(err);
-})
-   */
-
-///// 2 ////
-/* const post = fetch('https://jsonplaceholder.typicode.com/posts',{
+return  fetch('https://jsonplaceholder.typicode.com/posts',{
   method: 'POST',
   body:JSON.stringify({
     title: "My homework post",
@@ -28,8 +21,7 @@ console.log(json.title)
     userId: 1
   })
 })
-
-post
+})
 .then((response) => {
   if (response.ok) {
      return response.json()
@@ -39,14 +31,7 @@ post
 })
 .then((json) => {
 console.log(json.id)
-})
-.catch((err) => {
-  console.log(err);
-  
-})  */
-/// 3 ///
-
- /*  const put = fetch('https://jsonplaceholder.typicode.com/posts/1',{
+return  fetch('https://jsonplaceholder.typicode.com/posts/1',{
   method: 'PUT',
   headers: {'Content-Type': 'application/json; charset=UTF-8'},
   body: JSON.stringify({
@@ -56,8 +41,7 @@ console.log(json.id)
   userId: 1
 })
 })
-
-put
+})
 .then((response) => {
   if (response.ok) {
     return response.json()
@@ -67,23 +51,15 @@ put
 })
 .then((json) => {
  console.log(json.title)
-})
-.catch((err) => {
-  console.log(err)
-})
- */
-
-/// 4 ///
-
-/*  const patch = fetch('https://jsonplaceholder.typicode.com/posts/1',{
+ console.log(json.body)
+ return    fetch('https://jsonplaceholder.typicode.com/posts/1',{
   method: 'PATCH',
   headers: {'Content-Type': 'application/json; charset=UTF-8'},
   body: JSON.stringify({
   title: "PATCHED title",
 })
 })
-
-patch
+})
 .then((response) => {
   if (response.ok) {
     return response.json()
@@ -93,18 +69,10 @@ patch
 })
 .then((json) => {
  console.log(json.title)
-})
-.catch((err) => {
-  console.log(err)
-})  */
-
-////  5 ////
-
-/*  const delet = fetch('https://jsonplaceholder.typicode.com/posts/1',{
+ return  fetch('https://jsonplaceholder.typicode.com/posts/1',{
    method: 'DELETE',
 })
-
-delet
+})
 .then((response) => {
   if (response.ok) {
     console.log("Пост удалён")
@@ -113,7 +81,9 @@ delet
   }
 })
 .catch((err) => {
-  console.log(err)}) */
+   console.log(err);
+})
+  
 
 
 
